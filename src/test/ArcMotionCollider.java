@@ -38,8 +38,6 @@ public class ArcMotionCollider {
 		while(System.currentTimeMillis() - t1 < 1000){
 			//Parametric eqn for a circle: r*cos(vt / r) , r*sin(vt / r) 
 			//Switching cos to y and sin to x. It should work on the same principle as an x-axis transformation but simpler to deal with.
-			//EFFECTIVE RANGE OF ATTACK: max value of attackPos[0] or attackPos[1]. Try to make it hit radius.
-			//FIX THIS SHIT MAKE IT WORK
 			attackPos[0] = (float)(r * Math.sin(v * (System.currentTimeMillis() - t1) / 1000) + initialPos[0]); 
 			attackPos[1] = (float)(r * Math.cos(v * (System.currentTimeMillis() - t1) / 1000) + initialPos[1]);
 			
